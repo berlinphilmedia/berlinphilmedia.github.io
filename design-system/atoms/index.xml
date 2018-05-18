@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Atoms on Digital Concert Hall Design System</title>
+    <link>/design-system/atoms/</link>
+    <description>Recent content in Atoms on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/design-system/atoms/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Action Toggle</title>
+      <link>/design-system/atoms/action-toggle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/atoms/action-toggle/</guid>
+      <description>Usage Action Toggles are used when an on/off action is available. Examples include selecting a work as a Favorite, or downloading for offline viewing.
+Variants States Toggle buttons have two states - On and Off. When pressed these toggles will switch to the other state, and perform the accompanying action. When a toggle action causes content to be removed (like when marking something as unavailable offline), a confirmation dialog should be displayed to avoid mistakes.</description>
+    </item>
+    
+    <item>
+      <title>Button</title>
+      <link>/design-system/atoms/button/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/atoms/button/</guid>
+      <description>Usage Buttons are used primarily on action items. Some examples include Watch Concert, Preview, Share. Do not use Buttons as navigational elements.
+Variants Types of Button Icon Only Use this option only for commonly identifiably icons (favorite star, play/pause, etc), and only where the layout requires a small button.
+Text Only Most calls to action can be solved with only text, as language is less dubious than iconography. Use clear, short and concise language, always from the user&amp;rsquo;s standpoint, and not our own (i.</description>
+    </item>
+    
+    <item>
+      <title>Content Type Label</title>
+      <link>/design-system/atoms/content-type-label/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/atoms/content-type-label/</guid>
+      <description> Overview These labels identify content items. They should be simple, readable and closely tied to the Digital Concert Hall brand colors.
+Goals  Easily spot different content types Establish a color system across the app (live, archive, free)   General Rules  Size defined by padding Label should not exceed 8 characters  Visual Reference 
+ Labels    Content Label key Notes     concert DCH_content_type_concert    upcoming live concert DCH_content_type_live    running live concert DCH_content_type_live_now should be used only in DCH state D3   work DCH_content_type_label_work    film DCH_content_type_label_film    interview DCH_content_type_label_interview    playlist DCH_content_type_label_playlist    free content DCH_free_content_label this is an additional label, it applies to all content types with attribute is_free = true       </description>
+    </item>
+    
+    <item>
+      <title>Hero Image</title>
+      <link>/design-system/atoms/hero-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/atoms/hero-image/</guid>
+      <description>Overview This is an image element which appears in the most prominent area of the view, and in most cases is full-width. It&amp;rsquo;s always striking and compelling.
+Goals  Engage users&amp;rsquo; attention Promote media playback Add impact to every item presented   Visual Reference General Rules  Original images are usually 16:9 On very narrow (or very wide) screens, avoid images being disproportionately small by cropping the sides (never top or bottom) Calculate image height proportional to available screen height  Click images for up-to-date measurements and features.</description>
+    </item>
+    
+    <item>
+      <title>Live Countdown</title>
+      <link>/design-system/atoms/live-countdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/atoms/live-countdown/</guid>
+      <description> Overview The countdown element appears on certain views of upcoming live content items. It&amp;rsquo;s meant to engage users and remind them a concert is coming.
+ Visual Reference Click images for up-to-date measurements and features.
+XS 
+XL 
+ Labels    Content Label key     days DCH_countdown_days   hours DCH_countdown_hours   minutes DCH_countdown_minutes   seconds DCH_countdown_seconds     Accessibility alternative text    </description>
+    </item>
+    
+    <item>
+      <title>Thumbnail</title>
+      <link>/design-system/atoms/thumbnail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/atoms/thumbnail/</guid>
+      <description>This is an image element that appears in smaller modules. It may appear small, or very small, so images should be chosen accordingly.
+Goals  Represent content visually Hint at context of the item Add impact to every item presented   Visual Reference General Rules  Original images are usually 16:9 On very narrow elements, avoid images being disproportionately small by cropping the sides (never top or bottom)  Click images for up-to-date measurements and features.</description>
+    </item>
+    
+  </channel>
+</rss>

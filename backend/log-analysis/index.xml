@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Log Analysis on Digital Concert Hall Design System</title>
+    <link>/backend/log-analysis/</link>
+    <description>Recent content in Log Analysis on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/backend/log-analysis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ELK - General Info</title>
+      <link>/backend/log-analysis/elk-general-info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/log-analysis/elk-general-info/</guid>
+      <description>Elasticsearch Elasticsearch is the central software unit that acts as a RESTful database, containing all the data. It is based on Apache Lucene.
+The data entries are stored as JSON documents in different indices (each index being a Lucene index underneath).
+Logstash Logstash acts as the data shipper, extracting data from a source (e.g. log files on a storage server) and writing it to a specified location (most likely Elasticsearch) after preparing/processing it in some way.</description>
+    </item>
+    
+    <item>
+      <title>Current Setup</title>
+      <link>/backend/log-analysis/current-setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/log-analysis/current-setup/</guid>
+      <description>The current setup processes and stores Apache HTTP logs from all LIVE, TEST, and DEV systems. It is running on a single AWS machine (&amp;ldquo;DCH ELK (WIP)&amp;ldquo;).
+The logs are being fed by Filebeat, which is installed individually on all servers where log files are located (i.e. the LIVE, TEST and DEV servers). Filebeat is a light-weight data shipper similar to Logstash, but with limited capabilities. It is designed specifically to read local log files line by line, while putting very little strain on the machine&amp;rsquo;s hardware resources.</description>
+    </item>
+    
+    <item>
+      <title>List of log fields</title>
+      <link>/backend/log-analysis/list-of-log-fields/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/log-analysis/list-of-log-fields/</guid>
+      <description>This is a list of all relevant fields that a log entry (in the form of an Elasticsearch document) can contain.
+Most fields are directly extracted from the log line, but because they are stored as individual fields in the document, they can be used for visualizations, and documents can be searched and filtered based on these fields.
+A field can have a number of different datatypes. These datatypes are described in the Elasticsearch documentation: https://www.</description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch REST API (for advanced users)</title>
+      <link>/backend/log-analysis/elasticsearch-rest-api-for-advanced-users/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/log-analysis/elasticsearch-rest-api-for-advanced-users/</guid>
+      <description>Elasticsearch provides a REST API to communicate with the instance. This means that we can issue cURL commands in the console, e.g. to configure settings or to receive information about the data.
+This will rarely be necessary for most users, but it can be very helpful. For example, to obtain a list of all stored indices, we can use this command:
+curl -XGET &#39;&amp;lt;elasticsearch-ip&amp;gt;:&amp;lt;elasticsearch-port&amp;gt;/_cat/indices?v&#39;
+Kibana simplifies this by providing an IO-interface (&amp;ldquo;Dev Tools&amp;rdquo; in the sidebar on the left) where the prefixed Elasticsearch address is omitted, leaving only the Elasticsearch API call.</description>
+    </item>
+    
+    <item>
+      <title>Using Kibana</title>
+      <link>/backend/log-analysis/using-kibana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/log-analysis/using-kibana/</guid>
+      <description>Below, will find a short overview of the Kibana web page. The official Kibana documentation provides a more detailed description of all functionality: https://www.elastic.co/guide/en/kibana/5.2/index.html
+Connect The Kibana instance is available at http://172.30.1.206:8080.
+You will need VPN access to load the website.
+&amp;ldquo;Discover&amp;rdquo; Panel This is the first panel that gets loaded. Its purpose is to be able to explore the data quickly. The log entries can be searched, filtered and ordered.</description>
+    </item>
+    
+  </channel>
+</rss>

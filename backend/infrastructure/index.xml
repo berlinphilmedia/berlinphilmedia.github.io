@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Infrastructure on Digital Concert Hall Design System</title>
+    <link>/backend/infrastructure/</link>
+    <description>Recent content in Infrastructure on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/backend/infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web servers</title>
+      <link>/backend/infrastructure/web-servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/infrastructure/web-servers/</guid>
+      <description>TODO: Explain environments: LIVE, TEST, DEV
+Quicklink: https://admin.digitalconcerthall.com/tmp_Serveruebersicht/dchserver.html
+Website    Environment Url     LIVE über Cloudfront https://www.digitalconcerthall.com   LIVE Origin über Loadbalancer https://origin.digitalconcerthall.com   LIVE WEB 1 https://www-1.aws.digitalconcerthall.com   LIVE WEB 2 https://www-2.aws.digitalconcerthall.com   LIVE WEB 3 https://www-3.aws.digitalconcerthall.com   LIVE WEB 4 https://www-4.aws.digitalconcerthall.com   TEST https://www-test.dchdev.net/admin   DEV1 https://www-dev1.dchdev.net/admin    API    Environment Url with v1.</description>
+    </item>
+    
+    <item>
+      <title>VOD servers</title>
+      <link>/backend/infrastructure/vod-servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/infrastructure/vod-servers/</guid>
+      <description>Video on Demand Streaming Server Locations We are hosting the vod files on several systems around the world and deliver video streams directly without the use of a CDN. You can read more about his decision in Alex&amp;rsquo; blogpost: http://www.mcwilliam.biz/blog/vastly-improve-your-video-delivery-by-ridding-your-cdn
+Most systems are bare metal servers from Softlayer or Hetzner, some are virtual machines provided by IIJ.
+Every system hosts the complete DCH video archive, meaning every content that requires a user to have at least a registration to be played.</description>
+    </item>
+    
+    <item>
+      <title>Live streaming</title>
+      <link>/backend/infrastructure/live-streaming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/infrastructure/live-streaming/</guid>
+      <description>For a standard DCH broadcast from the Philharmonie wie use the following workflow:
+Setup and Workflow 1) Encoding in the Philharmonie The input live signal is encoded with two Digital Rapid encoders in the highest resolution we want to offer to users (typically 1080p, 3,5 MBit/s).
+To access the encoders a VPN connection to Studio 6 is necessary (host 217.199.77.138). Use the remote desktop app with the following adresses:</description>
+    </item>
+    
+    <item>
+      <title>Database servers</title>
+      <link>/backend/infrastructure/database-servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/infrastructure/database-servers/</guid>
+      <description> Website DB phpMyAdmin DB1 and DB2 are switched from time to time, a.k.a. master-slave-switch. For access to the db talk to SkyGate.
+   Environment Url     Live DB1 Master https://db-live1.dchdev.net/mysqlmgr/index.php   Live DB2 Slave https://db-live2.dchdev.net/mysqlmgr/index.php   Live DB3 Read Replica https://db-live3.dchdev.net/mysqlmgr/index.php    Streamlog DB    Environment Url User Credentials (read-only)     TEST https://sl2-admin.digitalconcerthall.com/mysqlmgr_old/index.php?db=streamlog_live User: bph_ro, PW: 5BbAyREC2UZon5fA_SL2    </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/backend/infrastructure/contacts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/infrastructure/contacts/</guid>
+      <description>| Text approved by | Status | | &amp;ndash; | &amp;ndash; | | Robert | no | | Jan | no | | Marcus | no |
+1.7 Contacts Berlin Phil Media Geben wir hier das ganze Team an, oder nur relevante Kontakte fürs Development? In welcher Reihenfolge? In welcher Form nennen wir die Themenzuständigkeit?
+TODO: Add complete team!
+| Name | Contact | | &amp;ndash; | &amp;ndash; | | Enrique Bader | e.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/backend/infrastructure/images/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/infrastructure/images/readme/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

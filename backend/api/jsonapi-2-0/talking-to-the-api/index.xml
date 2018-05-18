@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talking to the API on Digital Concert Hall Design System</title>
+    <link>/backend/api/jsonapi-2-0/talking-to-the-api/</link>
+    <description>Recent content in Talking to the API on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/backend/api/jsonapi-2-0/talking-to-the-api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Static Content Data</title>
+      <link>/backend/api/jsonapi-2-0/talking-to-the-api/static-content-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/talking-to-the-api/static-content-data/</guid>
+      <description>Retrieving concert and related data Base url
+https://api.digitalconcerthall.com/v2/
+https://tv-dev1.dchdev.net/v2/
+Manifest Provides all locations to static data
+Endpoint:
+ /manifest
+ HTTP request header:
+ Accept : application/hal+json,application/json,text/json
+ Home Provides all necessary data to render the home screen
+Endpoint:
+ /home
+ HTTP request header:
+ Accept : application/hal+json,application/json,text/json
+ Complete List of Archive Concerts Endpoint:
+ /vod-concerts
+ HTTP request header:
+ Accept : application/hal+json,application/json,text/json
+ Complete List of Live Concerts Endpoint:</description>
+    </item>
+    
+  </channel>
+</rss>

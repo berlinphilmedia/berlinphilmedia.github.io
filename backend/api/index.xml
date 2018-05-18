@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database and API on Digital Concert Hall Design System</title>
+    <link>/backend/api/</link>
+    <description>Recent content in Database and API on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/backend/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Database</title>
+      <link>/backend/api/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JSONAPI 1.1</title>
+      <link>/backend/api/jsonapi-1-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-1-1/</guid>
+      <description>http://api.digitalconcerthall.com/v1.1/static/manifest-en</description>
+    </item>
+    
+    <item>
+      <title>JSONAPI 1.2</title>
+      <link>/backend/api/jsonapi-1-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-1-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logging</title>
+      <link>/backend/api/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/logging/</guid>
+      <description>3.5.1 Tracking Stream Minutes If a client plays back video content (except for trailers and previews) it has to report every minute watched, regardless if it is paid or free content. This mechanism is crucial as it is used for calculating license fees. This also applies to audio only streams if an application implements this feature. In JSONAPI 1.2 this is done via the streamlog call. The logging system is separated from the core system and therefore it has to manage device information for itself.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/backend/api/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/readme/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

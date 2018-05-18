@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database on Digital Concert Hall Design System</title>
+    <link>/backend/database/</link>
+    <description>Recent content in Database on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/backend/database/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Content Data Structures</title>
+      <link>/backend/database/dchcoreb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/database/dchcoreb/</guid>
+      <description>Concert Full-length concerts are the Digital Concert Hall’s primary content type , both live and on-demand. Read more about concert content.
+Concert data - not language specific    Attribute Example Type Notes     id 466 int(11) only not used in public   product_id 23442 varchar(255) the publicly used id for concerts   created_by 1 int(11) user ID of admin user who created the entry (1 for imported data)   published yes / no tinyint(1) is this concert available in DCH applications or not   is_free yes / no tinyint(1) is this concert available to play for registered DCH users without a valid ticket or not   locked_for_import yes / no tinyint(1) can the current data be overwritten by importing new data or not   created timestamp int(11) concerts can be created manually or by importing new concert data   updated timestamp int(11) concerts can be updated manually or by importing new concert data   type vod or live varchar(255) is it an upcoming live concert or an archive concert   begin_date 2017-07-01 20:15:00 datetime planned start of the performance   end_date 2017-07-01 23:15:00 datetime planned end of the live streaming, corrected directly after the event   publish_date 2017-07-3 10:00:00 datetime when was this concert publised in the archive (type=vod)   pre_event_opening_time 15 int(11) the number of minutes the live stream is made available before concert begin    Concert data - language specific    Attribute Example Type Notes     image_id 2312 int(11) photo of this concert   language language code - ISO-639-1 varchar(2) see 2.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Style on Digital Concert Hall Design System</title>
+    <link>/design/style/</link>
+    <description>Recent content in Style on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/design/style/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Color &amp; Contrast</title>
+      <link>/design/style/color/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design/style/color/</guid>
+      <description>The Berliner Philharmoniker color palette is strongly defined by it’s bold yellow color, used with black and grey type on white background. To support the role of visual media on the Digital Concert Platform, the background has been flipped to a dark hue with white and grey type for contrast. Red plays a part in identifying Live broadcasts - separating them visually from the rest of the content, giving them urgency and intensity.</description>
+    </item>
+    
+    <item>
+      <title>Typography</title>
+      <link>/design/style/typography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design/style/typography/</guid>
+      <description>Typography on the DCH Platform aims to replicate the feel of the Berliner Philharmoniker brand in a visual way, while feeling at home on each digital platform seperately. With a quite neutral family as the baseline, default platform typefaces are used with certain spacing techniques to create the same look and feel across all devices, yet each version feels at home on the OS in question. The feel of type is much more defined by the space around it, the line-height and its role in the vertical rhythm of the design, the tracking between the letters, and the weight of the type.</description>
+    </item>
+    
+    <item>
+      <title>Spacing</title>
+      <link>/design/style/spacing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design/style/spacing/</guid>
+      <description>8-Point Grid System DCH Design System uses the 8-point Grid System to make sure spacing within and between elements stays consistent throughout the layout. It also reduces guesswork when it comes to interpreting reference files, and allows both designers to remove guesswork when creating new elements, as well as developers to make educated guesses if they are in any doubt about implementation.
+The 8-point system should also be applied to margins, typography and basically any element with a unit measurement.</description>
+    </item>
+    
+    <item>
+      <title>Iconography</title>
+      <link>/design/style/iconography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design/style/iconography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Motion</title>
+      <link>/design/style/motion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design/style/motion/</guid>
+      <description>With different platforms handling animation, easing and parallax in their own ways, it&amp;rsquo;s important to establish some ground rules for how it is handled within DCH to unify the experience.
+Parallax Speed: Easing:
+Expand/Collapse Speed: Easing:</description>
+    </item>
+    
+  </channel>
+</rss>

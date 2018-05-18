@@ -1,0 +1,62 @@
+body > header, .post-header {
+	display: none;
+}
+
+body > article {
+	margin-top: 0;
+}
+
+body > article > aside {
+	top: 0;
+}
+
+article > aside {
+	background-color: #1f1f1f;
+}
+
+/*
+* Customizing the sidebar
+*/
+
+/* Override underline */
+article > aside .menu .dd-item.active > div * {
+	border: none;
+}
+
+/* Sidebar links, down arrow */
+article > aside .menu a, article > aside .menu .dd-item div i.category-icon {
+	color: #dadada;
+}
+
+/* Sidebar item hover + arror hover */
+article > aside .menu .dd-item div a:hover, article > aside .menu .dd-item div a:focus, article > aside .menu .dd-item div a:active, article > aside .menu .dd-item div i.category-icon:active, article > aside .menu .dd-item div i.category-icon:focus, article > aside .menu .dd-item div i.category-icon:hover {
+	background-color: #0D0D0D;
+}
+
+/* Lines to the left of text */
+article > aside .menu .dd-item li {
+	/*border-left: 1px solid #545454;*/
+	border-left: none;
+}
+
+/* Currently selected item */
+article > aside .menu .dd-item.active > div {
+	background-color: transparent;
+}
+
+/* Currently selected item text */
+article > aside .menu .dd-item.active > div * {
+	color: #ffc900;
+}
+
+/* Override the big title on top */
+article section.page h1:first-of-type { 
+	margin: 3rem 0rem;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	text-align: left;
+	text-transform: none;
+	color: #060606;
+	font-weight: 200;
+	font-size: 3.25rem;
+	line-height: 2.7rem;
+}

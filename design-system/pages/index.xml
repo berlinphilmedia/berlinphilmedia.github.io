@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Digital Concert Hall Design System</title>
+    <link>/design-system/pages/</link>
+    <description>Recent content in Pages on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/design-system/pages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Concert Details</title>
+      <link>/design-system/pages/concert-details/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/pages/concert-details/</guid>
+      <description> Overview Breakdown  Specs
+   </description>
+    </item>
+    
+    <item>
+      <title>Concert Details (Archive)</title>
+      <link>/design-system/pages/concert-details-archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/pages/concert-details-archive/</guid>
+      <description>This view contains all information related to a specific concert, including metadata and a browsable list of included works.
+Goals  Inform user about concert details Display participant and conductor details Allow navigation within concert   Click images for up-to-date measurements and features.
+XS S M L  API: concert.type = &amp;ldquo;vod&amp;rdquo;
+Reference content Use these concerts to test the interface during concept and development work.
+ 23488 - Simon Rattle conducts “Bluebeard’s Castle” 2886 - Mariss Jansons conducts Dvořák’s Symphony “From the New World” 2580 - Sir Simon Rattle conducts Wagner’s “Die Walküre” 3923 - “40 Years of the Orchestra Academy” Gala Concert with Simon Rattle 1640 - Concert to commemorate the 25th anniversary of the Chernobyl nuclear disaster 81 - Claudio Abbado conducts the 1999 New Year’s Eve concert  Primary information    Element Label key / API data Example Content / Label text     content type label DCH_content_type_label_concert concert   free content label (conditional, not for U3 state) DCH_free_content_label (if concert.</description>
+    </item>
+    
+    <item>
+      <title>Concerts</title>
+      <link>/design-system/pages/concerts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/pages/concerts/</guid>
+      <description>Overview This is the main entry point for users who want to browse our archive, as well as check on upcoming live concerts. It should be seen as a space for curated content rather than a warehouse of information. Make use of Content Lists for this purpose.
+Goals  Expose users to fresh/recently added content Draw attention to upcoming live presentations and capture viewers Display evergreen content in inviting and creative ways Encourage exploration of archive  Breakdown here should we list the specific contents of the content lists for example?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Molecules on Digital Concert Hall Design System</title>
+    <link>/design-system/molecules/</link>
+    <description>Recent content in Molecules on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/design-system/molecules/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Content Item</title>
+      <link>/design-system/molecules/content-item/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/molecules/content-item/</guid>
+      <description>Content Items (CI) are visual representations of the DCH catalog, used for browsing. They should contain just enough information to help users find their desired content, and look visually appealing and inviting.
+Types Depending on context, a CI may appear in two modes:
+ Card
+ Designed for short, horizontal lists (max. 30 items) Elements are bigger, get more attention Should never be in a mosaic  Compact
+ Optimized for quickly browsing bigger lists Compact yet informative Can appear in lists/stacks   Goals  At-a-glance identification of media items Engage and invite to view item/read more information   Card Format Cards are big and bold, so they&amp;rsquo;re great for browsing smaller row-based lists, but due to their size, not so great for large collections.</description>
+    </item>
+    
+    <item>
+      <title>Info Bar</title>
+      <link>/design-system/molecules/info-bar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/molecules/info-bar/</guid>
+      <description>The info bar identifies the content type, as well as the content&amp;rsquo;s date in the correct format.
+Breakdown  Content Type Label Content Item Date   What to display    content type date format     archive concert [DATE]   upcoming live concert [DATE_FULL]   running live concert [DATE_FULL]   film [DATE_YEAR]   interview [DATE]   playlist none    Visual Reference Click images for up-to-date measurements and features.</description>
+    </item>
+    
+    <item>
+      <title>Playlist Entry</title>
+      <link>/design-system/molecules/playlist-entry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/molecules/playlist-entry/</guid>
+      <description>A Playlist Entry indicates all the revelant controls and metadata for a specific piece of media that gets displayed in a playlist view.
+Breakdown  Action Toggle Caret Progress Indicator  States Expandable/Collapsable A Playlist Entry may contain a sublevel of a list of Movements. In that case, the Playist Entry has a expandable/collapsable state.
+Collapsed Expanded Playing If the entry is being played in the media player, it will appear as Playing.</description>
+    </item>
+    
+  </channel>
+</rss>

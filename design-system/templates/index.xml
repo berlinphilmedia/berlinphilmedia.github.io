@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Templates on Digital Concert Hall Design System</title>
+    <link>/design-system/templates/</link>
+    <description>Recent content in Templates on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/design-system/templates/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Content Section</title>
+      <link>/design-system/templates/content-sections/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/templates/content-sections/</guid>
+      <description> Breakdown  Featured Content Area Content Lists (multiple instances) Browse (entry point)  </description>
+    </item>
+    
+    <item>
+      <title>Details View</title>
+      <link>/design-system/templates/details-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/templates/details-view/</guid>
+      <description>Overview The details view is the official place where all information about a certain content item can be obtained, from top-level to more in-depth. Here the user can watch the content, previews as well as navigate the item&amp;rsquo;s specific sub-parts.
+Breakdown The exact layout of this view varies a lot according to the type of content. In this section, we&amp;rsquo;ll focus on the general areas of information. Please check individual pages for exact information.</description>
+    </item>
+    
+  </channel>
+</rss>

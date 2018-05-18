@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Digital Concert Hall Design System</title>
+    <link>/</link>
+    <description>Recent content on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Color &amp; Contrast</title>
+      <link>/design/style/color/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design/style/color/</guid>
+      <description>The Berliner Philharmoniker color palette is strongly defined by it’s bold yellow color, used with black and grey type on white background. To support the role of visual media on the Digital Concert Platform, the background has been flipped to a dark hue with white and grey type for contrast. Red plays a part in identifying Live broadcasts - separating them visually from the rest of the content, giving them urgency and intensity.</description>
+    </item>
+    
+    <item>
+      <title>Content Data Structures</title>
+      <link>/backend/database/dchcoreb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/database/dchcoreb/</guid>
+      <description>Concert Full-length concerts are the Digital Concert Hall’s primary content type , both live and on-demand. Read more about concert content.
+Concert data - not language specific    Attribute Example Type Notes     id 466 int(11) only not used in public   product_id 23442 varchar(255) the publicly used id for concerts   created_by 1 int(11) user ID of admin user who created the entry (1 for imported data)   published yes / no tinyint(1) is this concert available in DCH applications or not   is_free yes / no tinyint(1) is this concert available to play for registered DCH users without a valid ticket or not   locked_for_import yes / no tinyint(1) can the current data be overwritten by importing new data or not   created timestamp int(11) concerts can be created manually or by importing new concert data   updated timestamp int(11) concerts can be updated manually or by importing new concert data   type vod or live varchar(255) is it an upcoming live concert or an archive concert   begin_date 2017-07-01 20:15:00 datetime planned start of the performance   end_date 2017-07-01 23:15:00 datetime planned end of the live streaming, corrected directly after the event   publish_date 2017-07-3 10:00:00 datetime when was this concert publised in the archive (type=vod)   pre_event_opening_time 15 int(11) the number of minutes the live stream is made available before concert begin    Concert data - language specific    Attribute Example Type Notes     image_id 2312 int(11) photo of this concert   language language code - ISO-639-1 varchar(2) see 2.</description>
+    </item>
+    
+    <item>
+      <title>Database</title>
+      <link>/backend/api/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ELK - General Info</title>
+      <link>/backend/log-analysis/elk-general-info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/log-analysis/elk-general-info/</guid>
+      <description>Elasticsearch Elasticsearch is the central software unit that acts as a RESTful database, containing all the data. It is based on Apache Lucene.
+The data entries are stored as JSON documents in different indices (each index being a Lucene index underneath).
+Logstash Logstash acts as the data shipper, extracting data from a source (e.g. log files on a storage server) and writing it to a specified location (most likely Elasticsearch) after preparing/processing it in some way.</description>
+    </item>
+    
+    <item>
+      <title>OAuth2(-ish)</title>
+      <link>/backend/api/jsonapi-2-0/connecting-to-the-api/oauth2-ish/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/connecting-to-the-api/oauth2-ish/</guid>
+      <description>Access tokens OAuth secured calls require a set authorization header with an API 2.0 access token. These calls are marked with in the documentation.
+An access token can be one for an anonymous user or one for a logged in user. These tokens come in the form of a JWT (see https://jwt.io/).
+The concept of expiring access tokens and retrieving new access tokens with a refresh token is not fully implemented yet and won&amp;rsquo;t be available for some time after the initial launch of API 2.</description>
+    </item>
+    
+    <item>
+      <title>Preface</title>
+      <link>/backend/api/jsonapi-2-0/preface/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/preface/</guid>
+      <description>The data structure of the responses that deliver content data follows the HAL syntax ([http://stateless.co/hal_specification.html](http://stateless.co/hal_specification.html%29) and will be closer to our internal structure than it was in the API 1.2. As the API 2.0 will take account of the request&amp;rsquo;s `Accept` header, clients MUST set it to one of `application/hal+json`, `application/json` or `text/json`. Otherwise the API will respond with status code 406 (&amp;ldquo;Not Acceptable&amp;rdquo;) (or, in case of a development /testing environment, with a browser-friendly dump).</description>
+    </item>
+    
+    <item>
+      <title>Updating device information</title>
+      <link>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/updating-device-information/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/updating-device-information/</guid>
+      <description>Used for keeping the device information up-to-date. For device parameters see “2.5.1 Device Detection - Parameters for Establishing a Session”. In this case all parameters are optional.
+TODO: Refactor response structure. See: https://berlinphil.codebasehq.com/projects/dch-api-2/tickets/7
+Endpoint: &amp;gt; /device
+HTTP request header: &amp;gt; Content-Type : application/x-www-form-urlencoded
+&amp;gt; Authorization: Bearer [ACCESS_TOKEN]
+Request POST params: - app_id=[APP_ID] - device_vendor=[DEVICE_VENDOR] - affiliate=[AFFILIATE] - app_version=[APP_VERSION] - device_model=[DEVICE_MODEL] - app_distributor=[APP_DISTRIBUTOR]
+Response success example:
+{ &amp;quot;token&amp;quot;: &amp;quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQ2NmFmMmFiMzc3YjI0NzM2NDdlNzkyNzU1MmVjOGQ4MjI2YTY4YzgwNmI2NjhhNjMzNjA2ZjY4YjFlMzRhMjAwNDQ1MzIzNTU2OGMxNzM4In0.eyJhdWQiOiJkY2gucm9rdSIsImp0aSI6IjQ2NmFmMmFiMzc3YjI0NzM2NDdlNzkyNzU1MmVjOGQ4MjI2YTY4YzgwNmI2NjhhNjMzNjA2ZjY4YjFlMzRhMjAwNDQ1MzIzNTU2OGMxNzM4IiwiaWF0IjoxNDc4MTc0ODYwLCJuYmYiOjE0NzgxNzQ4NjAsImV4cCI6MTQ3ODE3ODQ2MCwic3ViIjoiIiwic2NvcGVzIjpbXX0.J8yvSUB6PdLZKh3laC3V_5q4lhcMKGSe6Q5WGryEqV5-Rep59J-Xr5LjjTdAlWGaJPx9FHKauA52ynNfK_ozMYDQ-fOYp2bOruADJvva85ZRaCwKOrwHfV_g___RpuA4KK-TyoPQVn1t7cGJnhaMSJsYXvI7M9qDmQHygKpKKZU&amp;quot;, &amp;quot;token_id&amp;quot;: &amp;quot;466af2ab377b2473647e7927552ec8d8226a68c806b668a633606f68b1e34a2004453235568c1738&amp;quot;, &amp;quot;pin&amp;quot;: &amp;quot;1414002&amp;quot;, &amp;quot;device_vendor&amp;quot;: &amp;quot;roku&amp;quot;, &amp;quot;device_model&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;app_id&amp;quot;: &amp;quot;dch.</description>
+    </item>
+    
+    <item>
+      <title>Web servers</title>
+      <link>/backend/infrastructure/web-servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/infrastructure/web-servers/</guid>
+      <description>TODO: Explain environments: LIVE, TEST, DEV
+Quicklink: https://admin.digitalconcerthall.com/tmp_Serveruebersicht/dchserver.html
+Website    Environment Url     LIVE über Cloudfront https://www.digitalconcerthall.com   LIVE Origin über Loadbalancer https://origin.digitalconcerthall.com   LIVE WEB 1 https://www-1.aws.digitalconcerthall.com   LIVE WEB 2 https://www-2.aws.digitalconcerthall.com   LIVE WEB 3 https://www-3.aws.digitalconcerthall.com   LIVE WEB 4 https://www-4.aws.digitalconcerthall.com   TEST https://www-test.dchdev.net/admin   DEV1 https://www-dev1.dchdev.net/admin    API    Environment Url with v1.</description>
+    </item>
+    
+    <item>
+      <title>Current Setup</title>
+      <link>/backend/log-analysis/current-setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/log-analysis/current-setup/</guid>
+      <description>The current setup processes and stores Apache HTTP logs from all LIVE, TEST, and DEV systems. It is running on a single AWS machine (&amp;ldquo;DCH ELK (WIP)&amp;ldquo;).
+The logs are being fed by Filebeat, which is installed individually on all servers where log files are located (i.e. the LIVE, TEST and DEV servers). Filebeat is a light-weight data shipper similar to Logstash, but with limited capabilities. It is designed specifically to read local log files line by line, while putting very little strain on the machine&amp;rsquo;s hardware resources.</description>
+    </item>
+    
+    <item>
+      <title>Establishing an Initial Session</title>
+      <link>/backend/api/jsonapi-2-0/connecting-to-the-api/establishing-an-initial-session/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/connecting-to-the-api/establishing-an-initial-session/</guid>
+      <description>If the client has no access token or an invalid one, it has to establish an initial session to retrieve one. The initial retrieved access token will always be an anonymous one until it has been authenticated via either a password grant, a connect process on the website following a pin grant, or a registration process using the API (currently only 1.2). The access token must be stored on the device.</description>
+    </item>
+    
+    <item>
+      <title>JSONAPI 1.1</title>
+      <link>/backend/api/jsonapi-1-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-1-1/</guid>
+      <description>http://api.digitalconcerthall.com/v1.1/static/manifest-en</description>
+    </item>
+    
+    <item>
+      <title>Language Support</title>
+      <link>/backend/api/jsonapi-2-0/language-support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/language-support/</guid>
+      <description>Language specific versions will be determined by the client&amp;rsquo;s Accept-Language header. If the set language is not supported by our service, it falls back to English. In most cases, this will deliver the correct language preferred by the user with no effort from the client itself. However, if a client wants to have full control of the language that will be delivered, it can set the Accept-Language header manually.</description>
+    </item>
+    
+    <item>
+      <title>Typography</title>
+      <link>/design/style/typography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design/style/typography/</guid>
+      <description>Typography on the DCH Platform aims to replicate the feel of the Berliner Philharmoniker brand in a visual way, while feeling at home on each digital platform seperately. With a quite neutral family as the baseline, default platform typefaces are used with certain spacing techniques to create the same look and feel across all devices, yet each version feels at home on the OS in question. The feel of type is much more defined by the space around it, the line-height and its role in the vertical rhythm of the design, the tracking between the letters, and the weight of the type.</description>
+    </item>
+    
+    <item>
+      <title>User information</title>
+      <link>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/user-profile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/user-profile/</guid>
+      <description>Returns the complete user profile. Request must be GET method.
+Endpoint: &amp;gt; /user
+HTTP request header: &amp;gt; Authorization: Bearer [ACCESS_TOKEN]
+Response success example:
+{ &amp;quot;updated&amp;quot;: 1478867593, &amp;quot;uid&amp;quot;: 651983, &amp;quot;username&amp;quot;: &amp;quot;j.beardi@berliner-philharmoniker.de&amp;quot;, &amp;quot;email&amp;quot;: &amp;quot;j.beardi@berliner-philharmoniker.de&amp;quot;, &amp;quot;is_verified&amp;quot;: true, &amp;quot;profile&amp;quot;: { &amp;quot;firstname&amp;quot;: &amp;quot;Jan&amp;quot;, &amp;quot;lastname&amp;quot;: &amp;quot;Beardi&amp;quot;, &amp;quot;street&amp;quot;: &amp;quot;Leipziger Platz 1&amp;quot;, &amp;quot;zip&amp;quot;: &amp;quot;10117&amp;quot;, &amp;quot;city&amp;quot;: &amp;quot;Berlin&amp;quot;, &amp;quot;country&amp;quot;: &amp;quot;DE&amp;quot;, &amp;quot;permissions&amp;quot;: { &amp;quot;can_test_livestream&amp;quot;: true } }, &amp;quot;access&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;ticket&amp;quot;, &amp;quot;valid&amp;quot;: true, &amp;quot;active&amp;quot;: true, &amp;quot;until&amp;quot;: 1507809855 }, &amp;quot;institutional_access&amp;quot;: { &amp;quot;status&amp;quot;: 20, &amp;quot;is_active&amp;quot;: false, &amp;quot;last_validated&amp;quot;: 1477496197, &amp;quot;is_validation_needed&amp;quot;: false, &amp;quot;institution&amp;quot;: { &amp;quot;name&amp;quot;: &amp;quot;Berlin Phil Media University&amp;quot;, &amp;quot;street&amp;quot;: &amp;quot;Leipziger Platz 1&amp;quot;, &amp;quot;zip&amp;quot;: &amp;quot;10117&amp;quot;, &amp;quot;city&amp;quot;: &amp;quot;Berlin&amp;quot;, &amp;quot;subdivision&amp;quot;: null, &amp;quot;country&amp;quot;: &amp;quot;DE&amp;quot;, &amp;quot;image&amp;quot;: &amp;quot;images/core/iij.</description>
+    </item>
+    
+    <item>
+      <title>VOD servers</title>
+      <link>/backend/infrastructure/vod-servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/infrastructure/vod-servers/</guid>
+      <description>Video on Demand Streaming Server Locations We are hosting the vod files on several systems around the world and deliver video streams directly without the use of a CDN. You can read more about his decision in Alex&amp;rsquo; blogpost: http://www.mcwilliam.biz/blog/vastly-improve-your-video-delivery-by-ridding-your-cdn
+Most systems are bare metal servers from Softlayer or Hetzner, some are virtual machines provided by IIJ.
+Every system hosts the complete DCH video archive, meaning every content that requires a user to have at least a registration to be played.</description>
+    </item>
+    
+    <item>
+      <title>Authenticating with username and password</title>
+      <link>/backend/api/jsonapi-2-0/connecting-to-the-api/authenticating-with-username-and-password/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/connecting-to-the-api/authenticating-with-username-and-password/</guid>
+      <description>Provides a user login. The sent access token is the anonymous one the client retrieved when establishing the initial session. The received access token in this response MUST be stored on the device as this is the access token that is connected to the user.
+Note: Anonymous access tokens MAY being recycled so that the one that is connected to a user will be the same as the former anonymous one.</description>
+    </item>
+    
+    <item>
+      <title>JSONAPI 1.2</title>
+      <link>/backend/api/jsonapi-1-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-1-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>List of log fields</title>
+      <link>/backend/log-analysis/list-of-log-fields/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/log-analysis/list-of-log-fields/</guid>
+      <description>This is a list of all relevant fields that a log entry (in the form of an Elasticsearch document) can contain.
+Most fields are directly extracted from the log line, but because they are stored as individual fields in the document, they can be used for visualizations, and documents can be searched and filtered based on these fields.
+A field can have a number of different datatypes. These datatypes are described in the Elasticsearch documentation: https://www.</description>
+    </item>
+    
+    <item>
+      <title>Live streaming</title>
+      <link>/backend/infrastructure/live-streaming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/infrastructure/live-streaming/</guid>
+      <description>For a standard DCH broadcast from the Philharmonie wie use the following workflow:
+Setup and Workflow 1) Encoding in the Philharmonie The input live signal is encoded with two Digital Rapid encoders in the highest resolution we want to offer to users (typically 1080p, 3,5 MBit/s).
+To access the encoders a VPN connection to Studio 6 is necessary (host 217.199.77.138). Use the remote desktop app with the following adresses:</description>
+    </item>
+    
+    <item>
+      <title>Not implemented yet</title>
+      <link>/backend/api/jsonapi-2-0/not-implemented-yet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/not-implemented-yet/</guid>
+      <description>Some calls are not yet implemented in the API 2.0. These calls must be made via API 1.2 as a workaround. Every API 1.2 call that needs an API 1.2 device token will work right out of the box with the ID of an API 2.0 access token instead.
+The API 2.0 access token’s ID can be retrieved through the payload of that token (see https://jwt.io/). Note: The ID is not retrieved through the response of any API 2.</description>
+    </item>
+    
+    <item>
+      <title>Spacing</title>
+      <link>/design/style/spacing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design/style/spacing/</guid>
+      <description>8-Point Grid System DCH Design System uses the 8-point Grid System to make sure spacing within and between elements stays consistent throughout the layout. It also reduces guesswork when it comes to interpreting reference files, and allows both designers to remove guesswork when creating new elements, as well as developers to make educated guesses if they are in any doubt about implementation.
+The 8-point system should also be applied to margins, typography and basically any element with a unit measurement.</description>
+    </item>
+    
+    <item>
+      <title>User favourites</title>
+      <link>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/user-favourites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/user-favourites/</guid>
+      <description>Return/update the user’s favourites.
+Retrieving the favourites  Endpoint: /user/favourites Request method: GET  HTTP request header: Authorization: Bearer [ACCESS_TOKEN]
+Updating the favourites  Endpoint: /user/favourites Request method: POST Request parameters:  action=(add|delete) id=[ID]  HTTP request headers:  Authorization: Bearer [ACCESS_TOKEN] Content-Type : application/x-www-form-urlencoded   Response success example:
+{ &amp;quot;updated&amp;quot;: 1475074300, &amp;quot;_links&amp;quot;: { &amp;quot;favourites&amp;quot;: [ { &amp;quot;href&amp;quot;: &amp;quot;//tv-dev1.dchdev.net/v2/work/23427-1&amp;quot;, &amp;quot;updated&amp;quot;: 1475074300, &amp;quot;id&amp;quot;: &amp;quot;23427-1&amp;quot;, &amp;quot;title&amp;quot;: &amp;quot;[Éclat] (1st Version for 15 instruments from 1965)&amp;quot;, &amp;quot;short_title&amp;quot;: null, &amp;quot;is_free&amp;quot;: false, &amp;quot;date&amp;quot;: { &amp;quot;published&amp;quot;: 1472720400, &amp;quot;begin&amp;quot;: 1472229000 }, &amp;quot;image&amp;quot;: { &amp;quot;overview&amp;quot;: &amp;quot;//www-dev1.</description>
+    </item>
+    
+    <item>
+      <title>Authenticating using a PIN</title>
+      <link>/backend/api/jsonapi-2-0/connecting-to-the-api/authenticating-using-a-pin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/connecting-to-the-api/authenticating-using-a-pin/</guid>
+      <description>Provides a user login or registration via PIN connect process.
+Endpoint: &amp;gt; /oauth2/token
+HTTP request header: &amp;gt; Content-Type : application/x-www-form-urlencoded
+&amp;gt; Authorization: Bearer [ACCESS_TOKEN]
+Request POST params: - grant_type=pin
+Response success example:
+{ &amp;quot;token_type&amp;quot;: &amp;quot;Bearer&amp;quot;, &amp;quot;expires_in&amp;quot;: 94608000, &amp;quot;access_token&amp;quot;: &amp;quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk3MTIyMzQyMTM1ZGI1YjA3MDE4MDYzNzhhYTQ3MjRkYjE0ZTVmYzBkODNhODJkZDQ3ZDYyMTU0NDQ5NGVkM2M1MzgyN2IwOWRhZDM2NjExIn0.eyJhdWQiOiJkY2gucm9rdSIsImp0aSI6Ijk3MTIyMzQyMTM1ZGI1YjA3MDE4MDYzNzhhYTQ3MjRkYjE0ZTVmYzBkODNhODJkZDQ3ZDYyMTU0NDQ5NGVkM2M1MzgyN2IwOWRhZDM2NjExIiwiaWF0IjoxNDc4ODY2OTU1LCJuYmYiOjE0Nzg4NjY5NTUsImV4cCI6MTU3MzQ3NDk1NSwic3ViIjoiNjUxOTgzIiwic2NvcGVzIjpbXX0.bbAVvJzMUABUWLoHSoyvKGopJ644_5MZOICSdP_LciSaFSJQ69pQWuonl84CimPpVixqVJjWJsb9jvlfHv-UIME-BOYh0VLmNOMnqMYo6C0liMdToUpE5vCDSsrYurm064R83Zl_rw5IbvX_jSHWCF8Cp0UioPPnVG3v3O9FAHM&amp;quot;, &amp;quot;refresh_token&amp;quot;: &amp;quot;eHuWG4Kgs30QaDAFcWFYxZz/wdc7V/6NhE0RergqZ46fwIj3OI0pAAdoTMhUrfQLfl6+Ak7dvKp0APgRhQLt8x5c02q+IDqf7bPSKMyGJr+8u8thJDvqUcEEn/VKJlP39b9kgy3t6SaWhBnFJ1GivfZLbdsjdSWwIGI1t0FicqWsg59zwz80/LNozoFTPvDbJmaovBF8g2nSpa/h3ogwKrVSE0NUysqZyUv/ly1GyI8sTYDdwPMP/sxZs+c5Ydnr4fGSuXIo8XE8L5dmWDWBRuM11mixD+ovfOjWm6RYYTS/u/j4/EYkwqmKgbUKSQT+aYc92QCSVI+cf4Al+659ZnM7UOF3dFfAOyp4cwdjhGKYnpEttZcZNkjQ/Fn9/smaTdlpBtTWt6rg2IS6JtK2QSp32SDgJDfMdbMjmL2u4BiGSrx5aHCRkjWiXX0B6IKQXRiq+T0W4JxAIaWH5VjB4zDU/+FUtPOrEsjRlWl15dC4OiUcnL9xmx+s1hwoKxgs&amp;quot; }  Error response when user didn&amp;rsquo;t yet enter the PIN on the website:
+{ &amp;quot;error&amp;quot;:&amp;quot;invalid_request&amp;quot;, &amp;quot;message&amp;quot;:&amp;quot;The request is missing a required parameter, includes an invalid parameter value, includes a parameter more than once, or is otherwise malformed.</description>
+    </item>
+    
+    <item>
+      <title>Database servers</title>
+      <link>/backend/infrastructure/database-servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/infrastructure/database-servers/</guid>
+      <description> Website DB phpMyAdmin DB1 and DB2 are switched from time to time, a.k.a. master-slave-switch. For access to the db talk to SkyGate.
+   Environment Url     Live DB1 Master https://db-live1.dchdev.net/mysqlmgr/index.php   Live DB2 Slave https://db-live2.dchdev.net/mysqlmgr/index.php   Live DB3 Read Replica https://db-live3.dchdev.net/mysqlmgr/index.php    Streamlog DB    Environment Url User Credentials (read-only)     TEST https://sl2-admin.digitalconcerthall.com/mysqlmgr_old/index.php?db=streamlog_live User: bph_ro, PW: 5BbAyREC2UZon5fA_SL2    </description>
+    </item>
+    
+    <item>
+      <title>Iconography</title>
+      <link>/design/style/iconography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design/style/iconography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Retrieving Stream URLs</title>
+      <link>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/retrieving-stream-urls/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/retrieving-stream-urls/</guid>
+      <description>Returns all available stream channels. Request must be GET method.
+Note: The endpoint URL is also available in the content&amp;rsquo;s static data in the attributes _links.streams.href and _links.streams_trailer.href.
+Endpoint: &amp;gt; /streams/[PRODUCT_ID]
+HTTP request header: &amp;gt; Authorization: Bearer [ACCESS_TOKEN]
+Response success example:
+{ &amp;quot;channel&amp;quot;: { &amp;quot;vod_hevc_dash_abr&amp;quot;: { &amp;quot;codec&amp;quot;: &amp;quot;hevc&amp;quot;, &amp;quot;streaming_technique&amp;quot;: &amp;quot;dash_abr&amp;quot;, &amp;quot;has_audio_only&amp;quot;: false, &amp;quot;max_resolution&amp;quot;: &amp;quot;2160p&amp;quot;, &amp;quot;stream&amp;quot;: [ { &amp;quot;quality&amp;quot;: null, &amp;quot;audio_language&amp;quot;: null, &amp;quot;video_language&amp;quot;: null, &amp;quot;url&amp;quot;: &amp;quot;http://vod-world.dchdns.net/dash/dch/23506-1/hevc_,LOW_ONE,MEDIUM_ONE,HIGH,VERY_HIGH_ONE,.mp4.urlset/manifest.mpd&amp;quot; } ] }, &amp;quot;vod_h264_hls_abr&amp;quot;: { &amp;quot;codec&amp;quot;: &amp;quot;h264&amp;quot;, &amp;quot;streaming_technique&amp;quot;: &amp;quot;hls_abr&amp;quot;, &amp;quot;has_audio_only&amp;quot;: false, &amp;quot;max_resolution&amp;quot;: &amp;quot;1080p&amp;quot;, &amp;quot;stream&amp;quot;: [ { &amp;quot;quality&amp;quot;: null, &amp;quot;audio_language&amp;quot;: null, &amp;quot;video_language&amp;quot;: null, &amp;quot;url&amp;quot;: &amp;quot;http://vod-world.</description>
+    </item>
+    
+    <item>
+      <title>Data structures</title>
+      <link>/backend/api/jsonapi-2-0/data-structures/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/data-structures/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Motion</title>
+      <link>/design/style/motion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design/style/motion/</guid>
+      <description>With different platforms handling animation, easing and parallax in their own ways, it&amp;rsquo;s important to establish some ground rules for how it is handled within DCH to unify the experience.
+Parallax Speed: Easing:
+Expand/Collapse Speed: Easing:</description>
+    </item>
+    
+    <item>
+      <title>Streaming Capabilities &amp; Client Country</title>
+      <link>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/streaming-capabilities-and-client-country/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/streaming-capabilities-and-client-country/</guid>
+      <description>Returns streaming capabilities for that specific client if there should be any forced from DCH BE. Also returns the country which was detected from where the client was sending its request. The client country should be used for geoblocking purposes. Request must be GET method.
+Endpoint: &amp;gt; /client_info
+HTTP request header: &amp;gt; Authorization: Bearer [ACCESS_TOKEN]
+Response success example for a client that must use these given streaming capabilities:</description>
+    </item>
+    
+    <item>
+      <title>Upgrading an access token</title>
+      <link>/backend/api/jsonapi-2-0/connecting-to-the-api/upgrading-an-access-token/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/connecting-to-the-api/upgrading-an-access-token/</guid>
+      <description>When an app already has an access token from the API 1.x and migrates to using API 2.x, it should exchange its existing token with a JWT issued by the API 2.x.
+Endpoint: &amp;gt; /oauth2/token
+HTTP request header: &amp;gt; Content-Type : application/x-www-form-urlencoded
+Request POST params: - grant_type=exchange_token - app_id=[APP_ID] - app_version=[APP_VERSION] - client_secret=[APP_SECRET] - token=[V1_TOKEN]
+Note: Since APIv1 did not verify a clients identity, app_id, app_version and client_secret are mandatory here</description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch REST API (for advanced users)</title>
+      <link>/backend/log-analysis/elasticsearch-rest-api-for-advanced-users/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/log-analysis/elasticsearch-rest-api-for-advanced-users/</guid>
+      <description>Elasticsearch provides a REST API to communicate with the instance. This means that we can issue cURL commands in the console, e.g. to configure settings or to receive information about the data.
+This will rarely be necessary for most users, but it can be very helpful. For example, to obtain a list of all stored indices, we can use this command:
+curl -XGET &#39;&amp;lt;elasticsearch-ip&amp;gt;:&amp;lt;elasticsearch-port&amp;gt;/_cat/indices?v&#39;
+Kibana simplifies this by providing an IO-interface (&amp;ldquo;Dev Tools&amp;rdquo; in the sidebar on the left) where the prefixed Elasticsearch address is omitted, leaving only the Elasticsearch API call.</description>
+    </item>
+    
+    <item>
+      <title>Logging</title>
+      <link>/backend/api/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/logging/</guid>
+      <description>3.5.1 Tracking Stream Minutes If a client plays back video content (except for trailers and previews) it has to report every minute watched, regardless if it is paid or free content. This mechanism is crucial as it is used for calculating license fees. This also applies to audio only streams if an application implements this feature. In JSONAPI 1.2 this is done via the streamlog call. The logging system is separated from the core system and therefore it has to manage device information for itself.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/backend/api/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/readme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/backend/infrastructure/contacts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/infrastructure/contacts/</guid>
+      <description>| Text approved by | Status | | &amp;ndash; | &amp;ndash; | | Robert | no | | Jan | no | | Marcus | no |
+1.7 Contacts Berlin Phil Media Geben wir hier das ganze Team an, oder nur relevante Kontakte fürs Development? In welcher Reihenfolge? In welcher Form nennen wir die Themenzuständigkeit?
+TODO: Add complete team!
+| Name | Contact | | &amp;ndash; | &amp;ndash; | | Enrique Bader | e.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/backend/infrastructure/images/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/infrastructure/images/readme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Action Toggle</title>
+      <link>/design-system/atoms/action-toggle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/atoms/action-toggle/</guid>
+      <description>Usage Action Toggles are used when an on/off action is available. Examples include selecting a work as a Favorite, or downloading for offline viewing.
+Variants States Toggle buttons have two states - On and Off. When pressed these toggles will switch to the other state, and perform the accompanying action. When a toggle action causes content to be removed (like when marking something as unavailable offline), a confirmation dialog should be displayed to avoid mistakes.</description>
+    </item>
+    
+    <item>
+      <title>Breakpoints</title>
+      <link>/design/structure/breakpoints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design/structure/breakpoints/</guid>
+      <description>How It Works When designing Digital Concert Hall, it&amp;rsquo;s important that any decision takes into consideration that we support many platforms, and for each, an exponential number of devices, with screens of many sizes.
+Each platform has its own way to define how to deal with different device sizes:
+ Web uses media queries, with a wide choice of units (px/em/%/&amp;hellip;) iOS &amp;amp; tvOS uses size classes, and point Android uses screen density and density-independent pixels &amp;hellip;  As disparate as all these methods and measurements may be, most responsive sizing issues are global.</description>
+    </item>
+    
+    <item>
+      <title>Button</title>
+      <link>/design-system/atoms/button/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/atoms/button/</guid>
+      <description>Usage Buttons are used primarily on action items. Some examples include Watch Concert, Preview, Share. Do not use Buttons as navigational elements.
+Variants Types of Button Icon Only Use this option only for commonly identifiably icons (favorite star, play/pause, etc), and only where the layout requires a small button.
+Text Only Most calls to action can be solved with only text, as language is less dubious than iconography. Use clear, short and concise language, always from the user&amp;rsquo;s standpoint, and not our own (i.</description>
+    </item>
+    
+    <item>
+      <title>Concert Details</title>
+      <link>/design-system/pages/concert-details/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/pages/concert-details/</guid>
+      <description> Overview Breakdown  Specs
+   </description>
+    </item>
+    
+    <item>
+      <title>Concert Details (Archive)</title>
+      <link>/design-system/pages/concert-details-archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/pages/concert-details-archive/</guid>
+      <description>This view contains all information related to a specific concert, including metadata and a browsable list of included works.
+Goals  Inform user about concert details Display participant and conductor details Allow navigation within concert   Click images for up-to-date measurements and features.
+XS S M L  API: concert.type = &amp;ldquo;vod&amp;rdquo;
+Reference content Use these concerts to test the interface during concept and development work.
+ 23488 - Simon Rattle conducts “Bluebeard’s Castle” 2886 - Mariss Jansons conducts Dvořák’s Symphony “From the New World” 2580 - Sir Simon Rattle conducts Wagner’s “Die Walküre” 3923 - “40 Years of the Orchestra Academy” Gala Concert with Simon Rattle 1640 - Concert to commemorate the 25th anniversary of the Chernobyl nuclear disaster 81 - Claudio Abbado conducts the 1999 New Year’s Eve concert  Primary information    Element Label key / API data Example Content / Label text     content type label DCH_content_type_label_concert concert   free content label (conditional, not for U3 state) DCH_free_content_label (if concert.</description>
+    </item>
+    
+    <item>
+      <title>Concerts</title>
+      <link>/design-system/pages/concerts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/pages/concerts/</guid>
+      <description>Overview This is the main entry point for users who want to browse our archive, as well as check on upcoming live concerts. It should be seen as a space for curated content rather than a warehouse of information. Make use of Content Lists for this purpose.
+Goals  Expose users to fresh/recently added content Draw attention to upcoming live presentations and capture viewers Display evergreen content in inviting and creative ways Encourage exploration of archive  Breakdown here should we list the specific contents of the content lists for example?</description>
+    </item>
+    
+    <item>
+      <title>Content</title>
+      <link>/application/content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/application/content/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Content Item</title>
+      <link>/design-system/molecules/content-item/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/molecules/content-item/</guid>
+      <description>Content Items (CI) are visual representations of the DCH catalog, used for browsing. They should contain just enough information to help users find their desired content, and look visually appealing and inviting.
+Types Depending on context, a CI may appear in two modes:
+ Card
+ Designed for short, horizontal lists (max. 30 items) Elements are bigger, get more attention Should never be in a mosaic  Compact
+ Optimized for quickly browsing bigger lists Compact yet informative Can appear in lists/stacks   Goals  At-a-glance identification of media items Engage and invite to view item/read more information   Card Format Cards are big and bold, so they&amp;rsquo;re great for browsing smaller row-based lists, but due to their size, not so great for large collections.</description>
+    </item>
+    
+    <item>
+      <title>Content Section</title>
+      <link>/design-system/templates/content-sections/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/templates/content-sections/</guid>
+      <description> Breakdown  Featured Content Area Content Lists (multiple instances) Browse (entry point)  </description>
+    </item>
+    
+    <item>
+      <title>Content Team</title>
+      <link>/getting-started/introduction/content-team/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/getting-started/introduction/content-team/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Content Type Label</title>
+      <link>/design-system/atoms/content-type-label/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/atoms/content-type-label/</guid>
+      <description> Overview These labels identify content items. They should be simple, readable and closely tied to the Digital Concert Hall brand colors.
+Goals  Easily spot different content types Establish a color system across the app (live, archive, free)   General Rules  Size defined by padding Label should not exceed 8 characters  Visual Reference 
+ Labels    Content Label key Notes     concert DCH_content_type_concert    upcoming live concert DCH_content_type_live    running live concert DCH_content_type_live_now should be used only in DCH state D3   work DCH_content_type_label_work    film DCH_content_type_label_film    interview DCH_content_type_label_interview    playlist DCH_content_type_label_playlist    free content DCH_free_content_label this is an additional label, it applies to all content types with attribute is_free = true       </description>
+    </item>
+    
+    <item>
+      <title>Content Types</title>
+      <link>/getting-started/introduction/content-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/getting-started/introduction/content-types/</guid>
+      <description>Content types Concert todo
+Upcoming live concert todo
+Running live concert dd
+Work todo
+Film todo
+Interview todo
+Playlist todo</description>
+    </item>
+    
+    <item>
+      <title>Details View</title>
+      <link>/design-system/templates/details-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/templates/details-view/</guid>
+      <description>Overview The details view is the official place where all information about a certain content item can be obtained, from top-level to more in-depth. Here the user can watch the content, previews as well as navigate the item&amp;rsquo;s specific sub-parts.
+Breakdown The exact layout of this view varies a lot according to the type of content. In this section, we&amp;rsquo;ll focus on the general areas of information. Please check individual pages for exact information.</description>
+    </item>
+    
+    <item>
+      <title>Device Detection</title>
+      <link>/application/device-detection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/application/device-detection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Featured Content Area</title>
+      <link>/design-system/components/featured-content-area/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/components/featured-content-area/</guid>
+      <description>Overview A premium area where promoted content gets displayed in a prominent way. Its goal is to highlight archive content, showcase live concerts and promote sign up/subscription.
+Breakdown  Hero Image Info Bar Variable Content  Live Countdown [DCH3] Call To Action Button   Usage  Always at the top of a Template Key elements are visual imagery and event information (date, title)   Visual Reference Click images for up-to-date measurements and features on InVision.</description>
+    </item>
+    
+    <item>
+      <title>For Designers</title>
+      <link>/getting-started/introduction/designers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/getting-started/introduction/designers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>For Developers</title>
+      <link>/getting-started/introduction/developers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/getting-started/introduction/developers/</guid>
+      <description> test accounts test priviledges  </description>
+    </item>
+    
+    <item>
+      <title>Grid</title>
+      <link>/design/structure/grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design/structure/grid/</guid>
+      <description>How It Works A flexible grid is crucial when designing a consistent evolving experience across multiple platforms and screen sizes.
+Gutters Columns create gutters (gaps between column content) through padding. For devices with a screen width greater than 768px, the column padding is 24px. For devices with a screen width less than 768px, the column padding is 16px.
+Columns The Column width is variable, filling up the space left when gutter width and margin has been taken into account.</description>
+    </item>
+    
+    <item>
+      <title>Hero Image</title>
+      <link>/design-system/atoms/hero-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/atoms/hero-image/</guid>
+      <description>Overview This is an image element which appears in the most prominent area of the view, and in most cases is full-width. It&amp;rsquo;s always striking and compelling.
+Goals  Engage users&amp;rsquo; attention Promote media playback Add impact to every item presented   Visual Reference General Rules  Original images are usually 16:9 On very narrow (or very wide) screens, avoid images being disproportionately small by cropping the sides (never top or bottom) Calculate image height proportional to available screen height  Click images for up-to-date measurements and features.</description>
+    </item>
+    
+    <item>
+      <title>Info Bar</title>
+      <link>/design-system/molecules/info-bar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/molecules/info-bar/</guid>
+      <description>The info bar identifies the content type, as well as the content&amp;rsquo;s date in the correct format.
+Breakdown  Content Type Label Content Item Date   What to display    content type date format     archive concert [DATE]   upcoming live concert [DATE_FULL]   running live concert [DATE_FULL]   film [DATE_YEAR]   interview [DATE]   playlist none    Visual Reference Click images for up-to-date measurements and features.</description>
+    </item>
+    
+    <item>
+      <title>Live Countdown</title>
+      <link>/design-system/atoms/live-countdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/atoms/live-countdown/</guid>
+      <description> Overview The countdown element appears on certain views of upcoming live content items. It&amp;rsquo;s meant to engage users and remind them a concert is coming.
+ Visual Reference Click images for up-to-date measurements and features.
+XS 
+XL 
+ Labels    Content Label key     days DCH_countdown_days   hours DCH_countdown_hours   minutes DCH_countdown_minutes   seconds DCH_countdown_seconds     Accessibility alternative text    </description>
+    </item>
+    
+    <item>
+      <title>Navigation</title>
+      <link>/design-system/components/navigation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/components/navigation/</guid>
+      <description>The navigation component is how users know where they are in the service, and the way for them to jump between major content sections, as well as settings and other views.
+Each major platform (iOS, tvOS, Android, etc) provides their own navigation system and best practices. Digital Concert Hall tries to follow those practices in order to provide a seamless experience which is familiar to users.
+That means our navigation varies a lot depending on the system, and some elements may be less visible on certain platforms than others.</description>
+    </item>
+    
+    <item>
+      <title>Playlist</title>
+      <link>/design-system/components/playlist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/components/playlist/</guid>
+      <description> Overview A compilation of playlist entries to form a collection of media, playable in order. It&amp;rsquo;s goal is to provide a continuous listening/watching experience.
+Breakdown  Playlist Entry Action Toggle Progress Bar  Usage  Key elements are media metadata and media-specific options Entry dividers and background stretch past margin   Visual Reference Click images for up-to-date measurements and features on InVision.
+XS 
+S 
+   </description>
+    </item>
+    
+    <item>
+      <title>Playlist Entry</title>
+      <link>/design-system/molecules/playlist-entry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/molecules/playlist-entry/</guid>
+      <description>A Playlist Entry indicates all the revelant controls and metadata for a specific piece of media that gets displayed in a playlist view.
+Breakdown  Action Toggle Caret Progress Indicator  States Expandable/Collapsable A Playlist Entry may contain a sublevel of a list of Movements. In that case, the Playist Entry has a expandable/collapsable state.
+Collapsed Expanded Playing If the entry is being played in the media player, it will appear as Playing.</description>
+    </item>
+    
+    <item>
+      <title>Static Content Data</title>
+      <link>/backend/api/jsonapi-2-0/talking-to-the-api/static-content-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/talking-to-the-api/static-content-data/</guid>
+      <description>Retrieving concert and related data Base url
+https://api.digitalconcerthall.com/v2/
+https://tv-dev1.dchdev.net/v2/
+Manifest Provides all locations to static data
+Endpoint:
+ /manifest
+ HTTP request header:
+ Accept : application/hal+json,application/json,text/json
+ Home Provides all necessary data to render the home screen
+Endpoint:
+ /home
+ HTTP request header:
+ Accept : application/hal+json,application/json,text/json
+ Complete List of Archive Concerts Endpoint:
+ /vod-concerts
+ HTTP request header:
+ Accept : application/hal+json,application/json,text/json
+ Complete List of Live Concerts Endpoint:</description>
+    </item>
+    
+    <item>
+      <title>Tabs</title>
+      <link>/tab-test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tab-test/</guid>
+      <description> Tabs Dynamic tab  Here&amp;rsquo;s some content
+ Content of the profile tab
+ Something else goes here
+   Static tab Home  Profile  Messages  Settings   Home Content Something else Was? Hier  </description>
+    </item>
+    
+    <item>
+      <title>Thumbnail</title>
+      <link>/design-system/atoms/thumbnail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design-system/atoms/thumbnail/</guid>
+      <description>This is an image element that appears in smaller modules. It may appear small, or very small, so images should be chosen accordingly.
+Goals  Represent content visually Hint at context of the item Add impact to every item presented   Visual Reference General Rules  Original images are usually 16:9 On very narrow elements, avoid images being disproportionately small by cropping the sides (never top or bottom)  Click images for up-to-date measurements and features.</description>
+    </item>
+    
+    <item>
+      <title>Using Kibana</title>
+      <link>/backend/log-analysis/using-kibana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/log-analysis/using-kibana/</guid>
+      <description>Below, will find a short overview of the Kibana web page. The official Kibana documentation provides a more detailed description of all functionality: https://www.elastic.co/guide/en/kibana/5.2/index.html
+Connect The Kibana instance is available at http://172.30.1.206:8080.
+You will need VPN access to load the website.
+&amp;ldquo;Discover&amp;rdquo; Panel This is the first panel that gets loaded. Its purpose is to be able to explore the data quickly. The log entries can be searched, filtered and ordered.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dynamic Calls on Digital Concert Hall Design System</title>
+    <link>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/</link>
+    <description>Recent content in Dynamic Calls on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Updating device information</title>
+      <link>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/updating-device-information/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/updating-device-information/</guid>
+      <description>Used for keeping the device information up-to-date. For device parameters see “2.5.1 Device Detection - Parameters for Establishing a Session”. In this case all parameters are optional.
+TODO: Refactor response structure. See: https://berlinphil.codebasehq.com/projects/dch-api-2/tickets/7
+Endpoint: &amp;gt; /device
+HTTP request header: &amp;gt; Content-Type : application/x-www-form-urlencoded
+&amp;gt; Authorization: Bearer [ACCESS_TOKEN]
+Request POST params: - app_id=[APP_ID] - device_vendor=[DEVICE_VENDOR] - affiliate=[AFFILIATE] - app_version=[APP_VERSION] - device_model=[DEVICE_MODEL] - app_distributor=[APP_DISTRIBUTOR]
+Response success example:
+{ &amp;quot;token&amp;quot;: &amp;quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQ2NmFmMmFiMzc3YjI0NzM2NDdlNzkyNzU1MmVjOGQ4MjI2YTY4YzgwNmI2NjhhNjMzNjA2ZjY4YjFlMzRhMjAwNDQ1MzIzNTU2OGMxNzM4In0.eyJhdWQiOiJkY2gucm9rdSIsImp0aSI6IjQ2NmFmMmFiMzc3YjI0NzM2NDdlNzkyNzU1MmVjOGQ4MjI2YTY4YzgwNmI2NjhhNjMzNjA2ZjY4YjFlMzRhMjAwNDQ1MzIzNTU2OGMxNzM4IiwiaWF0IjoxNDc4MTc0ODYwLCJuYmYiOjE0NzgxNzQ4NjAsImV4cCI6MTQ3ODE3ODQ2MCwic3ViIjoiIiwic2NvcGVzIjpbXX0.J8yvSUB6PdLZKh3laC3V_5q4lhcMKGSe6Q5WGryEqV5-Rep59J-Xr5LjjTdAlWGaJPx9FHKauA52ynNfK_ozMYDQ-fOYp2bOruADJvva85ZRaCwKOrwHfV_g___RpuA4KK-TyoPQVn1t7cGJnhaMSJsYXvI7M9qDmQHygKpKKZU&amp;quot;, &amp;quot;token_id&amp;quot;: &amp;quot;466af2ab377b2473647e7927552ec8d8226a68c806b668a633606f68b1e34a2004453235568c1738&amp;quot;, &amp;quot;pin&amp;quot;: &amp;quot;1414002&amp;quot;, &amp;quot;device_vendor&amp;quot;: &amp;quot;roku&amp;quot;, &amp;quot;device_model&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;app_id&amp;quot;: &amp;quot;dch.</description>
+    </item>
+    
+    <item>
+      <title>User information</title>
+      <link>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/user-profile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/user-profile/</guid>
+      <description>Returns the complete user profile. Request must be GET method.
+Endpoint: &amp;gt; /user
+HTTP request header: &amp;gt; Authorization: Bearer [ACCESS_TOKEN]
+Response success example:
+{ &amp;quot;updated&amp;quot;: 1478867593, &amp;quot;uid&amp;quot;: 651983, &amp;quot;username&amp;quot;: &amp;quot;j.beardi@berliner-philharmoniker.de&amp;quot;, &amp;quot;email&amp;quot;: &amp;quot;j.beardi@berliner-philharmoniker.de&amp;quot;, &amp;quot;is_verified&amp;quot;: true, &amp;quot;profile&amp;quot;: { &amp;quot;firstname&amp;quot;: &amp;quot;Jan&amp;quot;, &amp;quot;lastname&amp;quot;: &amp;quot;Beardi&amp;quot;, &amp;quot;street&amp;quot;: &amp;quot;Leipziger Platz 1&amp;quot;, &amp;quot;zip&amp;quot;: &amp;quot;10117&amp;quot;, &amp;quot;city&amp;quot;: &amp;quot;Berlin&amp;quot;, &amp;quot;country&amp;quot;: &amp;quot;DE&amp;quot;, &amp;quot;permissions&amp;quot;: { &amp;quot;can_test_livestream&amp;quot;: true } }, &amp;quot;access&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;ticket&amp;quot;, &amp;quot;valid&amp;quot;: true, &amp;quot;active&amp;quot;: true, &amp;quot;until&amp;quot;: 1507809855 }, &amp;quot;institutional_access&amp;quot;: { &amp;quot;status&amp;quot;: 20, &amp;quot;is_active&amp;quot;: false, &amp;quot;last_validated&amp;quot;: 1477496197, &amp;quot;is_validation_needed&amp;quot;: false, &amp;quot;institution&amp;quot;: { &amp;quot;name&amp;quot;: &amp;quot;Berlin Phil Media University&amp;quot;, &amp;quot;street&amp;quot;: &amp;quot;Leipziger Platz 1&amp;quot;, &amp;quot;zip&amp;quot;: &amp;quot;10117&amp;quot;, &amp;quot;city&amp;quot;: &amp;quot;Berlin&amp;quot;, &amp;quot;subdivision&amp;quot;: null, &amp;quot;country&amp;quot;: &amp;quot;DE&amp;quot;, &amp;quot;image&amp;quot;: &amp;quot;images/core/iij.</description>
+    </item>
+    
+    <item>
+      <title>User favourites</title>
+      <link>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/user-favourites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/user-favourites/</guid>
+      <description>Return/update the user’s favourites.
+Retrieving the favourites  Endpoint: /user/favourites Request method: GET  HTTP request header: Authorization: Bearer [ACCESS_TOKEN]
+Updating the favourites  Endpoint: /user/favourites Request method: POST Request parameters:  action=(add|delete) id=[ID]  HTTP request headers:  Authorization: Bearer [ACCESS_TOKEN] Content-Type : application/x-www-form-urlencoded   Response success example:
+{ &amp;quot;updated&amp;quot;: 1475074300, &amp;quot;_links&amp;quot;: { &amp;quot;favourites&amp;quot;: [ { &amp;quot;href&amp;quot;: &amp;quot;//tv-dev1.dchdev.net/v2/work/23427-1&amp;quot;, &amp;quot;updated&amp;quot;: 1475074300, &amp;quot;id&amp;quot;: &amp;quot;23427-1&amp;quot;, &amp;quot;title&amp;quot;: &amp;quot;[Éclat] (1st Version for 15 instruments from 1965)&amp;quot;, &amp;quot;short_title&amp;quot;: null, &amp;quot;is_free&amp;quot;: false, &amp;quot;date&amp;quot;: { &amp;quot;published&amp;quot;: 1472720400, &amp;quot;begin&amp;quot;: 1472229000 }, &amp;quot;image&amp;quot;: { &amp;quot;overview&amp;quot;: &amp;quot;//www-dev1.</description>
+    </item>
+    
+    <item>
+      <title>Retrieving Stream URLs</title>
+      <link>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/retrieving-stream-urls/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/retrieving-stream-urls/</guid>
+      <description>Returns all available stream channels. Request must be GET method.
+Note: The endpoint URL is also available in the content&amp;rsquo;s static data in the attributes _links.streams.href and _links.streams_trailer.href.
+Endpoint: &amp;gt; /streams/[PRODUCT_ID]
+HTTP request header: &amp;gt; Authorization: Bearer [ACCESS_TOKEN]
+Response success example:
+{ &amp;quot;channel&amp;quot;: { &amp;quot;vod_hevc_dash_abr&amp;quot;: { &amp;quot;codec&amp;quot;: &amp;quot;hevc&amp;quot;, &amp;quot;streaming_technique&amp;quot;: &amp;quot;dash_abr&amp;quot;, &amp;quot;has_audio_only&amp;quot;: false, &amp;quot;max_resolution&amp;quot;: &amp;quot;2160p&amp;quot;, &amp;quot;stream&amp;quot;: [ { &amp;quot;quality&amp;quot;: null, &amp;quot;audio_language&amp;quot;: null, &amp;quot;video_language&amp;quot;: null, &amp;quot;url&amp;quot;: &amp;quot;http://vod-world.dchdns.net/dash/dch/23506-1/hevc_,LOW_ONE,MEDIUM_ONE,HIGH,VERY_HIGH_ONE,.mp4.urlset/manifest.mpd&amp;quot; } ] }, &amp;quot;vod_h264_hls_abr&amp;quot;: { &amp;quot;codec&amp;quot;: &amp;quot;h264&amp;quot;, &amp;quot;streaming_technique&amp;quot;: &amp;quot;hls_abr&amp;quot;, &amp;quot;has_audio_only&amp;quot;: false, &amp;quot;max_resolution&amp;quot;: &amp;quot;1080p&amp;quot;, &amp;quot;stream&amp;quot;: [ { &amp;quot;quality&amp;quot;: null, &amp;quot;audio_language&amp;quot;: null, &amp;quot;video_language&amp;quot;: null, &amp;quot;url&amp;quot;: &amp;quot;http://vod-world.</description>
+    </item>
+    
+    <item>
+      <title>Streaming Capabilities &amp; Client Country</title>
+      <link>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/streaming-capabilities-and-client-country/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/talking-to-the-api/dynamic-calls/streaming-capabilities-and-client-country/</guid>
+      <description>Returns streaming capabilities for that specific client if there should be any forced from DCH BE. Also returns the country which was detected from where the client was sending its request. The client country should be used for geoblocking purposes. Request must be GET method.
+Endpoint: &amp;gt; /client_info
+HTTP request header: &amp;gt; Authorization: Bearer [ACCESS_TOKEN]
+Response success example for a client that must use these given streaming capabilities:</description>
+    </item>
+    
+  </channel>
+</rss>

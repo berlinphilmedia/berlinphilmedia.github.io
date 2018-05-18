@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Application on Digital Concert Hall Design System</title>
+    <link>/application/</link>
+    <description>Recent content in Application on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/application/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Content</title>
+      <link>/application/content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/application/content/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Device Detection</title>
+      <link>/application/device-detection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/application/device-detection/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

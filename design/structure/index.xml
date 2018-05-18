@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Structure on Digital Concert Hall Design System</title>
+    <link>/design/structure/</link>
+    <description>Recent content in Structure on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/design/structure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Breakpoints</title>
+      <link>/design/structure/breakpoints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design/structure/breakpoints/</guid>
+      <description>How It Works When designing Digital Concert Hall, it&amp;rsquo;s important that any decision takes into consideration that we support many platforms, and for each, an exponential number of devices, with screens of many sizes.
+Each platform has its own way to define how to deal with different device sizes:
+ Web uses media queries, with a wide choice of units (px/em/%/&amp;hellip;) iOS &amp;amp; tvOS uses size classes, and point Android uses screen density and density-independent pixels &amp;hellip;  As disparate as all these methods and measurements may be, most responsive sizing issues are global.</description>
+    </item>
+    
+    <item>
+      <title>Grid</title>
+      <link>/design/structure/grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/design/structure/grid/</guid>
+      <description>How It Works A flexible grid is crucial when designing a consistent evolving experience across multiple platforms and screen sizes.
+Gutters Columns create gutters (gaps between column content) through padding. For devices with a screen width greater than 768px, the column padding is 24px. For devices with a screen width less than 768px, the column padding is 16px.
+Columns The Column width is variable, filling up the space left when gutter width and margin has been taken into account.</description>
+    </item>
+    
+  </channel>
+</rss>

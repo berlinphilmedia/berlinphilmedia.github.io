@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JSONAPI 2.0 on Digital Concert Hall Design System</title>
+    <link>/backend/api/jsonapi-2-0/</link>
+    <description>Recent content in JSONAPI 2.0 on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/backend/api/jsonapi-2-0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Preface</title>
+      <link>/backend/api/jsonapi-2-0/preface/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/preface/</guid>
+      <description>The data structure of the responses that deliver content data follows the HAL syntax ([http://stateless.co/hal_specification.html](http://stateless.co/hal_specification.html%29) and will be closer to our internal structure than it was in the API 1.2. As the API 2.0 will take account of the request&amp;rsquo;s `Accept` header, clients MUST set it to one of `application/hal+json`, `application/json` or `text/json`. Otherwise the API will respond with status code 406 (&amp;ldquo;Not Acceptable&amp;rdquo;) (or, in case of a development /testing environment, with a browser-friendly dump).</description>
+    </item>
+    
+    <item>
+      <title>Language Support</title>
+      <link>/backend/api/jsonapi-2-0/language-support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/language-support/</guid>
+      <description>Language specific versions will be determined by the client&amp;rsquo;s Accept-Language header. If the set language is not supported by our service, it falls back to English. In most cases, this will deliver the correct language preferred by the user with no effort from the client itself. However, if a client wants to have full control of the language that will be delivered, it can set the Accept-Language header manually.</description>
+    </item>
+    
+    <item>
+      <title>Not implemented yet</title>
+      <link>/backend/api/jsonapi-2-0/not-implemented-yet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/not-implemented-yet/</guid>
+      <description>Some calls are not yet implemented in the API 2.0. These calls must be made via API 1.2 as a workaround. Every API 1.2 call that needs an API 1.2 device token will work right out of the box with the ID of an API 2.0 access token instead.
+The API 2.0 access token’s ID can be retrieved through the payload of that token (see https://jwt.io/). Note: The ID is not retrieved through the response of any API 2.</description>
+    </item>
+    
+    <item>
+      <title>Data structures</title>
+      <link>/backend/api/jsonapi-2-0/data-structures/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/backend/api/jsonapi-2-0/data-structures/</guid>
+      <description>TODO</description>
+    </item>
+    
+  </channel>
+</rss>

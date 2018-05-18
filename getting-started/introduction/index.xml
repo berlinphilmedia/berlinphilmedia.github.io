@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conventions on Digital Concert Hall Design System</title>
+    <link>/getting-started/introduction/</link>
+    <description>Recent content in Conventions on Digital Concert Hall Design System</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/getting-started/introduction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Content Team</title>
+      <link>/getting-started/introduction/content-team/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/getting-started/introduction/content-team/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Content Types</title>
+      <link>/getting-started/introduction/content-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/getting-started/introduction/content-types/</guid>
+      <description>Content types Concert todo
+Upcoming live concert todo
+Running live concert dd
+Work todo
+Film todo
+Interview todo
+Playlist todo</description>
+    </item>
+    
+    <item>
+      <title>For Designers</title>
+      <link>/getting-started/introduction/designers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/getting-started/introduction/designers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>For Developers</title>
+      <link>/getting-started/introduction/developers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/getting-started/introduction/developers/</guid>
+      <description> test accounts test priviledges  </description>
+    </item>
+    
+  </channel>
+</rss>
